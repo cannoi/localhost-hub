@@ -1,0 +1,26 @@
+title: "Ofie Hub"
+eyebrow: SoloHost App
+footer_hint: Lưu cấu hình rồi khởi động từ SoloHost.
+output_file: .env
+after_save: Đã lưu. Khởi động app từ SoloHost.
+fields:
+  - id: p2p_port
+    label: Cổng P2P
+    type: text
+    default: "8090"
+    env: P2P_PORT
+  - id: hub_secret
+    label: Khóa bí mật mạng lưới
+    type: password
+    default: ""
+    env: HUB_SECRET
+  - id: data_dir
+    label: Thư mục lưu trữ
+    type: text
+    default: "/data"
+    env: DATA_DIR
+  - id: peers
+    label: Peer hubs (ws://host:8090, cách nhau bởi dấu phẩy)
+    type: text
+    default: ""
+    env: PEERS

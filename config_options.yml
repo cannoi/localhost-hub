@@ -1,0 +1,27 @@
+title: "Ofie Hub"
+eyebrow: SoloHost App
+description: "Ofie Hub — static sites, dynamic apps, and a signed P2P ledger. Bilingual EN/VI with an AI helper."
+footer_hint: "Save config, then start from SoloHost."
+output_file: .env
+after_save: "Saved. Start the app from SoloHost."
+fields:
+  - id: hub_name
+    label: Hub name / Tên Hub
+    type: text
+    default: "Ofie-Hub"
+    env: HUB_NAME
+  - id: hub_data_dir
+    label: Data directory
+    type: text
+    default: "/data/ofie-hub"
+    env: HUB_DATA_DIR
+  - id: hub_secret
+    label: Network secret (optional)
+    type: password
+    default: ""
+    env: HUB_SECRET
+  - id: peers
+    label: Peer hubs (ws://host:port, comma-separated)
+    type: text
+    default: ""
+    env: PEERS

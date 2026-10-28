@@ -1,0 +1,24 @@
+services:
+  app:
+    build: .
+    image: ofie-hub-solohost:latest
+    restart: unless-stopped
+    init: true
+    ports:
+      - "8080:8080"
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 8080
+      HUB_DATA_DIR: /data/ofie-hub
+      VITE_AUTH_ENABLED: "false"
+      NITRO_PRESET: node-server
+    volumes:
+      - hub-data:/data
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+volumes:
+  hub-data:

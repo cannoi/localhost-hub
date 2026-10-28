@@ -1,0 +1,20 @@
+services:
+  app:
+    image: ofie-hub:latest
+    restart: unless-stopped
+    labels:
+      pi.ui.primary: "true"
+    ports:
+      - "127.0.0.1:18080:8080"
+      - "127.0.0.1:18090:8090"
+    environment:
+      - PORT=8080
+      - P2P_PORT=8090
+      - DATA_DIR=/data
+      - HUB_SECRET=${HUB_SECRET:-}
+      - PEERS=${PEERS:-}
+    volumes:
+      - hub-data:/data
+
+volumes:
+  hub-data:
