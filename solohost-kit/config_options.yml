@@ -1,0 +1,17 @@
+title: "Ofie Hub"
+eyebrow: SoloHost App
+description: "Personal web hosting — static sites, apps, ledger. EN/VI + AI."
+footer_hint: "Lưu cấu hình rồi khởi động từ SoloHost."
+output_file: .env
+after_save: "Đã lưu. Khởi động app từ SoloHost."
+fields:
+  - id: hub_secret
+    label: Mật khẩu quản trị / Management password
+    type: password
+    default: ""
+    env: HUB_SECRET
+  - id: host_port
+    label: Cổng máy chủ / Host port
+    type: text
+    default: "48080"
+    env: HOST_PORT

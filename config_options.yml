@@ -1,0 +1,17 @@
+title: "Ofie Hub"
+eyebrow: SoloHost App
+description: "Personal web hosting on Pi SoloHost — static sites, apps, signed ledger. EN/VI + AI assistant."
+footer_hint: "Save config, then start from SoloHost."
+output_file: .env
+after_save: "Saved. Start the app from SoloHost."
+fields:
+  - id: hub_secret
+    label: Management password / Mật khẩu quản trị
+    type: password
+    default: ""
+    env: HUB_SECRET
+  - id: host_port
+    label: Host port / Cổng máy chủ
+    type: text
+    default: "48080"
+    env: HOST_PORT
